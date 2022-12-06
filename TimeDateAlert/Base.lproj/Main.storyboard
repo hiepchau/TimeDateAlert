@@ -1,24 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SEe-cA-v9k">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="v38-lI-isc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="SEe-cA-v9k" customClass="TabBarController" customModule="TimeDateAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4SY-Uc-g3K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qRK-fO-8TU" kind="relationship" relationship="viewControllers" id="2fA-8F-wwr"/>
+                        <segue destination="At5-7t-Yb6" kind="relationship" relationship="viewControllers" id="RIz-lo-e4f"/>
+                        <segue destination="QMD-nF-0CD" kind="relationship" relationship="viewControllers" id="3DW-VB-prh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgf-NI-9x5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-487" y="-404"/>
+        </scene>
+        <!--TimePicker-->
+        <scene sceneID="3OA-Ec-MXC">
+            <objects>
+                <navigationController id="qRK-fO-8TU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TimePicker" image="clock" catalog="system" id="GaV-3M-TvQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ped-LC-xxW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GBt-Re-NdS" kind="relationship" relationship="rootViewController" id="y50-On-RGq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkV-kU-1w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1522" y="360"/>
+        </scene>
+        <!--DateTime-->
+        <scene sceneID="ZPw-H7-Gmr">
+            <objects>
+                <navigationController id="At5-7t-Yb6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DateTime" image="calendar" catalog="system" id="NiO-1b-Kh7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wLA-At-rbc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ozq-32-mye" kind="relationship" relationship="rootViewController" id="TED-mZ-ply"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9Y-sW-lSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486" y="350"/>
+        </scene>
+        <!--Alert-->
+        <scene sceneID="E1F-2R-6DH">
+            <objects>
+                <navigationController id="QMD-nF-0CD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Alert" image="megaphone" catalog="system" id="2gI-jG-0cw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8j3-60-uTh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oH5-vy-D1p" kind="relationship" relationship="rootViewController" id="7fo-A4-LGG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reN-Oa-zXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="350"/>
+        </scene>
+        <!--TimePicker-->
+        <scene sceneID="2oS-NC-kTh">
+            <objects>
+                <viewController title="TimePicker" id="GBt-Re-NdS" customClass="TimePickerViewController" customModule="TimeDateAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qOH-ki-G1S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-Tt-utM">
+                                <rect key="frame" x="16" y="138" width="382" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bR4-Bp-pbW">
+                                <rect key="frame" x="186" y="374" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-Lw-jb6" userLabel="CoutDownn">
+                                <rect key="frame" x="16" y="455" width="382" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XA8-av-TCk" userLabel="LB countdown">
+                                <rect key="frame" x="186" y="679" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOA-c2-yZF">
+                                <rect key="frame" x="107" y="740" width="200" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Count Down"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z89-uh-IIh"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZOA-c2-yZF" firstAttribute="leading" secondItem="Z89-uh-IIh" secondAttribute="leading" constant="107" id="24o-FT-hJ0"/>
+                            <constraint firstItem="XA8-av-TCk" firstAttribute="top" secondItem="CWH-Lw-jb6" secondAttribute="bottom" constant="8" id="AvO-Un-YAP"/>
+                            <constraint firstItem="CWH-Lw-jb6" firstAttribute="top" secondItem="bR4-Bp-pbW" secondAttribute="bottom" constant="60" id="Dmd-2g-hSZ"/>
+                            <constraint firstItem="hXm-Tt-utM" firstAttribute="top" secondItem="Z89-uh-IIh" secondAttribute="top" constant="50" id="OGJ-JE-H86"/>
+                            <constraint firstItem="Z89-uh-IIh" firstAttribute="trailing" secondItem="hXm-Tt-utM" secondAttribute="trailing" constant="16" id="QYY-4B-jWG"/>
+                            <constraint firstItem="Z89-uh-IIh" firstAttribute="trailing" secondItem="CWH-Lw-jb6" secondAttribute="trailing" constant="16" id="Qqn-og-g07"/>
+                            <constraint firstItem="XA8-av-TCk" firstAttribute="centerX" secondItem="qOH-ki-G1S" secondAttribute="centerX" id="SD6-ne-P9O"/>
+                            <constraint firstItem="CWH-Lw-jb6" firstAttribute="leading" secondItem="Z89-uh-IIh" secondAttribute="leading" constant="16" id="TrM-55-RdQ"/>
+                            <constraint firstItem="ZOA-c2-yZF" firstAttribute="top" secondItem="XA8-av-TCk" secondAttribute="bottom" constant="40" id="VW0-A3-8WK"/>
+                            <constraint firstItem="bR4-Bp-pbW" firstAttribute="top" secondItem="hXm-Tt-utM" secondAttribute="bottom" constant="20" id="b4P-XZ-fea"/>
+                            <constraint firstItem="bR4-Bp-pbW" firstAttribute="centerX" secondItem="qOH-ki-G1S" secondAttribute="centerX" id="bjf-TN-g6b"/>
+                            <constraint firstItem="hXm-Tt-utM" firstAttribute="leading" secondItem="Z89-uh-IIh" secondAttribute="leading" constant="16" id="dvi-7O-Mei"/>
+                            <constraint firstItem="hXm-Tt-utM" firstAttribute="centerX" secondItem="qOH-ki-G1S" secondAttribute="centerX" id="oJq-Zu-oVX"/>
+                            <constraint firstItem="Z89-uh-IIh" firstAttribute="trailing" secondItem="ZOA-c2-yZF" secondAttribute="trailing" constant="107" id="plf-WP-LjD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TimePicker" id="Dnv-7I-rrs"/>
+                    <connections>
+                        <outlet property="btnCountDown" destination="ZOA-c2-yZF" id="DAy-gH-Epj"/>
+                        <outlet property="countDown" destination="CWH-Lw-jb6" id="0VZ-yy-7eZ"/>
+                        <outlet property="lbCountDown" destination="XA8-av-TCk" id="0W5-Jn-KHE"/>
+                        <outlet property="lbTimePicker" destination="bR4-Bp-pbW" id="bco-2q-LHV"/>
+                        <outlet property="timePicker" destination="hXm-Tt-utM" id="C1w-Oc-ryZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wf-lD-hTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1512" y="1069"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="Vra-Ai-k4h">
+            <objects>
+                <viewController title="DatePicker" id="Ozq-32-mye" customClass="DatePickerViewController" customModule="TimeDateAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZVa-ZN-Fpj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AuU-w4-yzw">
+                                <rect key="frame" x="41.5" y="148" width="331" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zKX-2h-3AC"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Wheel"/>
+                                    <segment title="Inline"/>
+                                    <segment title="Compact"/>
+                                </segments>
+                                <connections>
+                                    <action selector="btnSegTapped:" destination="Ozq-32-mye" eventType="valueChanged" id="WYh-UM-oPc"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-ua-Tmo">
+                                <rect key="frame" x="16" y="238" width="382" height="216"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDU-bl-Cqs">
+                                <rect key="frame" x="186" y="712" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0bc-Ey-4cO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AuU-w4-yzw" firstAttribute="width" secondItem="ZVa-ZN-Fpj" secondAttribute="width" multiplier="0.8" id="3dw-RG-IzB"/>
+                            <constraint firstItem="M5Z-ua-Tmo" firstAttribute="leading" secondItem="0bc-Ey-4cO" secondAttribute="leading" constant="16" id="9wn-uT-KNG"/>
+                            <constraint firstItem="0bc-Ey-4cO" firstAttribute="trailing" secondItem="M5Z-ua-Tmo" secondAttribute="trailing" constant="16" id="HHR-dC-4a3"/>
+                            <constraint firstItem="nDU-bl-Cqs" firstAttribute="centerX" secondItem="ZVa-ZN-Fpj" secondAttribute="centerX" id="OAt-eU-Sp6"/>
+                            <constraint firstItem="AuU-w4-yzw" firstAttribute="top" secondItem="0bc-Ey-4cO" secondAttribute="top" constant="60" id="dx0-8X-Yee"/>
+                            <constraint firstItem="M5Z-ua-Tmo" firstAttribute="top" secondItem="AuU-w4-yzw" secondAttribute="bottom" constant="50" id="eMl-xq-u5e"/>
+                            <constraint firstItem="AuU-w4-yzw" firstAttribute="centerX" secondItem="ZVa-ZN-Fpj" secondAttribute="centerX" id="fWc-XA-bXr"/>
+                            <constraint firstItem="0bc-Ey-4cO" firstAttribute="bottom" secondItem="nDU-bl-Cqs" secondAttribute="bottom" constant="80" id="iJb-kM-VaW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DateTimePicker" id="ZHO-lh-4Zh"/>
+                    <connections>
+                        <outlet property="datePicker" destination="M5Z-ua-Tmo" id="u3r-VE-zPw"/>
+                        <outlet property="lbDatePicker" destination="nDU-bl-Cqs" id="oTn-gm-5Ea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OyS-JG-hXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488.40579710144931" y="1068.75"/>
+        </scene>
+        <!--Alert-->
+        <scene sceneID="2JX-z6-qzN">
+            <objects>
+                <viewController id="oH5-vy-D1p" customClass="AlertViewController" customModule="TimeDateAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJ5-XS-n1N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rPL-cf-pTU"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alert" id="bic-2v-yA2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTY-E2-WWs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="1069"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="megaphone" catalog="system" width="128" height="111"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
